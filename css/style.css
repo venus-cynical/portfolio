@@ -288,7 +288,33 @@ body {
 
 .project-image {
     height: 200px;
-    background-color: #e5e7eb;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: "きさま！見ているなッ！";
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+        2px 2px 0 var(--secondary-color),
+        -2px -2px 0 var(--secondary-color),
+        2px -2px 0 var(--secondary-color),
+        -2px 2px 0 var(--secondary-color);
+    transform: skew(-5deg) translateY(100%);
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.project-card:hover .project-image::before {
+    transform: skew(-5deg) translateY(0);
+    opacity: 1;
 }
 
 .project-info {
@@ -440,6 +466,12 @@ body {
 }
 
 /* レスポンシブデザイン */
+@media (max-width: 1200px) {
+    .hero-content, .projects, .skills-grid {
+        padding: 0 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -460,32 +492,12 @@ body {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .nav-links a {
-        color: var(--text-color);
-        font-size: 1.2rem;
-        padding: 0.5rem 0;
-    }
-
-    .nav-links a:hover {
-        color: var(--primary-color);
-    }
-
     .hamburger {
         display: flex;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-        background-color: var(--primary-color);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-        background-color: var(--primary-color);
+    .hero-content {
+        padding: 1rem;
     }
 
     .hero-content h1 {
@@ -498,14 +510,83 @@ body {
 
     .hero-content p {
         font-size: 1rem;
+        br {
+            display: none;
+        }
     }
 
     .about-details, .about-strengths {
         margin: 1rem;
+        padding: 1.5rem;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .contact {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem;
+    }
+
+    .about-details, .about-strengths {
+        padding: 1rem;
+    }
+
+    .about-details h2, .about-strengths h2 {
+        font-size: 1.3rem;
+    }
+
+    .about-details li, .about-strengths li {
+        font-size: 0.9rem;
+    }
+
+    .project-card {
+        margin: 0 1rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        font-size: 1.3rem;
+    }
+
+    .project-image::before {
+        font-size: 1.5rem;
     }
 }
 
