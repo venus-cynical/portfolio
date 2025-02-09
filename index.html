@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Engineer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -14,8 +14,8 @@
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -31,27 +31,21 @@
         <!-- ヒーローセクション -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>クリエイティブなソリューションを提供するWeb開発者です。</p>
-            </div>
-        </section>
-
-        <!-- プロジェクトセクション -->
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <h3>Project 1</h3>
-                        <p>プロジェクトの説明文がここに入ります。</p>
-                        <div class="project-links">
-                            <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
+                <p class="subtitle">はじめまして、</p>
+                <h1>エンジニアの名前</h1>
+                <p>
+                    未経験からエンジニアを目指しています。<br>
+                    これまでの経験を活かしながら、新しい技術を学び続け、<br>
+                    ユーザーに価値を提供できるエンジニアを目指しています。
+                </p>
+                <div class="about-details">
+                    <h2>経歴</h2>
+                    <ul>
+                        <li>前職：[前職の業界・職種]</li>
+                        <li>学習開始：[プログラミング学習開始時期]</li>
+                        <li>目標：[なりたいエンジニア像]</li>
+                    </ul>
                 </div>
-                <!-- 他のプロジェクトカードも同様に追加可能 -->
             </div>
         </section>
 
@@ -62,16 +56,57 @@
                 <div class="skill-card">
                     <i class="fab fa-html5"></i>
                     <h3>HTML5</h3>
+                    <p>基本的なマークアップ、セマンティックHTML</p>
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-css3-alt"></i>
                     <h3>CSS3</h3>
+                    <p>レスポンシブデザイン、Flexbox、Grid</p>
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-js"></i>
                     <h3>JavaScript</h3>
+                    <p>DOM操作、非同期処理、モダンJS</p>
                 </div>
-                <!-- 他のスキルカードも同様に追加可能 -->
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>基本的なコンポーネント開発</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <p>基本的なバージョン管理</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- プロジェクトセクション -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>ポートフォリオサイト</h3>
+                        <p>HTML/CSS/JavaScriptを使用した自己紹介サイト。レスポンシブデザインとアニメーションを実装。</p>
+                        <div class="project-links">
+                            <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>TODOアプリ</h3>
+                        <p>Reactを使用したTODOアプリ。ローカルストレージを使用してデータを永続化。</p>
+                        <div class="project-links">
+                            <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -79,11 +114,11 @@
         <section id="contact" class="contact">
             <h2>Contact</h2>
             <div class="contact-content">
-                <p>お問い合わせはこちらからお願いします。</p>
+                <p>お気軽にご連絡ください。</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
@@ -92,7 +127,7 @@
 
     <!-- フッター -->
     <footer class="footer">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 エンジニアの名前. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>

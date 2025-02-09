@@ -7,11 +7,13 @@
 
 /* 基本スタイル */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-color: #1f2937;
-    --bg-color: #ffffff;
-    --accent-color: #3b82f6;
+    --primary-color: #64ffda;
+    --secondary-color: #0a192f;
+    --text-color: #ccd6f6;
+    --text-color-secondary: #8892b0;
+    --bg-color: #0a192f;
+    --bg-color-secondary: #112240;
+    --accent-color: #64ffda;
 }
 
 html {
@@ -31,8 +33,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(10, 25, 47, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -88,22 +90,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding: 0 1rem;
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    background: var(--bg-color);
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero-content .subtitle {
+    font-size: 2.5rem;
     color: var(--text-color);
+    margin-bottom: 1.5rem;
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    color: #4b5563;
+    color: var(--text-color-secondary);
     max-width: 600px;
-    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 /* プロジェクトセクション */
@@ -126,10 +140,10 @@ body {
 }
 
 .project-card {
-    background: white;
+    background: var(--bg-color-secondary);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -147,7 +161,11 @@ body {
 }
 
 .project-info h3 {
-    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.project-info p {
+    color: var(--text-color-secondary);
 }
 
 .project-links {
@@ -157,25 +175,26 @@ body {
 }
 
 .btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 /* スキルセクション */
 .skills {
     padding: 5rem 1rem;
-    background-color: #f3f4f6;
+    background-color: var(--bg-color-secondary);
 }
 
 .skills h2 {
@@ -195,7 +214,7 @@ body {
 .skill-card {
     text-align: center;
     padding: 2rem;
-    background: white;
+    background: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -206,8 +225,8 @@ body {
 }
 
 .skill-card i {
-    font-size: 3rem;
     color: var(--primary-color);
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -232,8 +251,8 @@ body {
 }
 
 .social-link {
-    font-size: 1.5rem;
     color: var(--text-color);
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
@@ -245,7 +264,8 @@ body {
 .footer {
     text-align: center;
     padding: 2rem;
-    background-color: #f3f4f6;
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-secondary);
 }
 
 /* レスポンシブデザイン */
