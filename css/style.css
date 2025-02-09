@@ -86,13 +86,9 @@ body {
 
 /* ヒーローセクション */
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    padding: 0 1rem;
-    background: var(--bg-color);
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 1rem;
 }
 
 .hero-content {
@@ -105,19 +101,53 @@ body {
     font-size: 4rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 .hero-content .subtitle {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--text-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content p {
     font-size: 1.25rem;
     color: var(--text-color-secondary);
-    max-width: 600px;
+    max-width: 800px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.about-details, .about-strengths {
+    background: var(--bg-color-secondary);
+    padding: 2rem;
+    border-radius: 10px;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-details h2, .about-strengths h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-details ul, .about-strengths ul {
+    list-style: none;
+}
+
+.about-details li, .about-strengths li {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-details li::before, .about-strengths li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
 }
 
 /* プロジェクトセクション */
@@ -279,7 +309,19 @@ body {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-details, .about-strengths {
+        padding: 1.5rem;
     }
 
     .project-grid {
