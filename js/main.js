@@ -6,24 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
-        
-        // ハンバーガーメニューのアニメーション
         hamburger.classList.toggle('active');
-        
-        // ナビゲーションメニューの表示/非表示
-        if (navLinks) {
-            if (isMenuOpen) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                navLinks.style.padding = '1rem';
-            } else {
-                navLinks.style.display = 'none';
-            }
+        navLinks?.classList.toggle('active');
+    });
+
+    // クリック以外の場所をタップした時にメニューを閉じる
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !e.target.closest('.nav')) {
+            isMenuOpen = false;
+            hamburger?.classList.remove('active');
+            navLinks?.classList.remove('active');
         }
     });
 
