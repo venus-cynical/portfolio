@@ -373,14 +373,17 @@ body {
     background: rgba(1, 1, 43, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     border: var(--cyber-border);
     position: relative;
     overflow: hidden;
 }
 
 .skill-card:hover {
-    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    box-shadow: 0 0 15px var(--secondary-color),
+                0 0 30px rgba(5, 217, 232, 0.3);
+    transform: translateY(-2px);
+    background: rgba(1, 1, 43, 0.9);
 }
 
 .skill-card i {
@@ -388,6 +391,13 @@ body {
     text-shadow: 0 0 10px var(--secondary-color);
     font-size: 3rem;
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover i {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color),
+                 0 0 30px rgba(255, 42, 109, 0.5);
 }
 
 /* コンタクトセクション */
