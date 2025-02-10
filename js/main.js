@@ -109,16 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     neonElements.forEach(addNeonFlicker);
 
-    // マウスカーソルエフェクト
-    const cursor = document.createElement('div');
-    cursor.className = 'cursor';
-    document.body.appendChild(cursor);
-
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
     // スクロール時のヘッダーの制御
     let lastScrollTop = 0;
     const header = document.querySelector('.header');
