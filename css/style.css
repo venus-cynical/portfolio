@@ -585,16 +585,26 @@ body {
         font-size: 1.3rem;
     }
 
-    .project-image::before {
-        font-size: 1.5rem;
-    }
-
     .project-image.manga-quotes::before {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
     }
 
     .project-image.tetris::before {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 360px) {
+    .project-image.manga-quotes::before {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .project-image.tetris::before {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
     }
 }
 
@@ -722,4 +732,5 @@ h1:hover, h2:hover, .logo:hover {
 .project-card:hover .project-image.tetris::before {
     transform: translateY(0);
     opacity: 1;
+} 
 } 
