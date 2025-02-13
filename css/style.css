@@ -348,7 +348,8 @@ body {
 }
 
 .project-image.lp-proto::before {
-    content: "LP サンプル";
+    content: "LP\Aサンプル";
+    white-space: pre;
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     font-weight: 900;
@@ -672,7 +673,7 @@ body {
     }
 
     .project-image.manga-quotes::before {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .project-image.tetris::before {
