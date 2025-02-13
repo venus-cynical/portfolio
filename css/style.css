@@ -303,14 +303,14 @@ body {
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 
-        3px 3px 0 var(--secondary-color),
-        -3px -3px 0 var(--secondary-color),
-        3px -3px 0 var(--secondary-color),
-        -3px 3px 0 var(--secondary-color),
-        3px 0 0 var(--secondary-color),
-        -3px 0 0 var(--secondary-color),
-        0 3px 0 var(--secondary-color),
-        0 -3px 0 var(--secondary-color);
+        2px 2px 0 var(--secondary-color),
+        -2px -2px 0 var(--secondary-color),
+        2px -2px 0 var(--secondary-color),
+        -2px 2px 0 var(--secondary-color),
+        2px 0 0 var(--secondary-color),
+        -2px 0 0 var(--secondary-color),
+        0 2px 0 var(--secondary-color),
+        0 -2px 0 var(--secondary-color);
     letter-spacing: 2px;
     position: absolute;
     top: 50%;
@@ -324,7 +324,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     font-weight: 900;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     background: linear-gradient(
         90deg,
         #ff0000 0%,    /* T */
@@ -344,6 +344,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
+    white-space: nowrap;
 }
 
 .project-image.lp-proto::before {
@@ -644,12 +645,21 @@ body {
     }
 
     .project-image.manga-quotes::before {
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: 0;
+        text-shadow: 
+            1px 1px 0 var(--secondary-color),
+            -1px -1px 0 var(--secondary-color),
+            1px -1px 0 var(--secondary-color),
+            -1px 1px 0 var(--secondary-color),
+            1px 0 0 var(--secondary-color),
+            -1px 0 0 var(--secondary-color),
+            0 1px 0 var(--secondary-color),
+            0 -1px 0 var(--secondary-color);
     }
 
     .project-image.tetris::before {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         letter-spacing: 1px;
     }
 }
@@ -661,8 +671,12 @@ body {
         letter-spacing: 0.5px;
     }
 
-    .project-image.tetris::before {
+    .project-image.manga-quotes::before {
         font-size: 1rem;
+    }
+
+    .project-image.tetris::before {
+        font-size: 0.9rem;
         letter-spacing: 0.5px;
     }
 }
