@@ -689,7 +689,8 @@ h1:hover, h2:hover, .logo:hover {
 }
 
 .project-image.manga-quotes::before {
-    content: "きさま！見ているなッ！";
+    content: "きさま！\A見ているなッ！";
+    white-space: pre;
     color: var(--primary-color);
     font-size: 1.25rem;
     font-weight: bold;
