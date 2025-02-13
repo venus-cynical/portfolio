@@ -346,6 +346,29 @@ body {
     opacity: 1;
 }
 
+.project-image.lp-proto::before {
+    content: "LP PROTO";
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: var(--primary-color);
+    text-shadow: 
+        3px 3px 0 var(--secondary-color),
+        -3px -3px 0 var(--secondary-color),
+        3px -3px 0 var(--secondary-color),
+        -3px 3px 0 var(--secondary-color),
+        3px 0 0 var(--secondary-color),
+        -3px 0 0 var(--secondary-color),
+        0 3px 0 var(--secondary-color),
+        0 -3px 0 var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
 .project-info {
     padding: 1.5rem;
 }
