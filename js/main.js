@@ -114,6 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
+        // モバイル画面サイズ（768px以下）の場合は、ヘッダーを常に表示
+        if (window.innerWidth <= 768) {
+            if (header) {
+                header.style.transform = 'translateY(0)';
+            }
+            return;
+        }
+
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (header) {
@@ -128,6 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         lastScrollTop = scrollTop;
+    });
+
+    // リサイズ時にもヘッダーの表示を制御
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768 && header) {
+            header.style.transform = 'translateY(0)';
+        }
     });
 
     // スキルアイコンのアニメーション
