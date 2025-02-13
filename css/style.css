@@ -299,7 +299,7 @@ body {
 .project-image::before {
     content: "きさま！見ているなッ！";
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
     text-shadow: 
         2px 2px 0 var(--secondary-color),
@@ -692,7 +692,7 @@ h1:hover, h2:hover, .logo:hover {
     content: "きさま！\A見ているなッ！";
     white-space: pre;
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
     text-shadow: 
         2px 2px 0 var(--secondary-color),
