@@ -347,7 +347,7 @@ body {
 }
 
 .project-image.lp-proto::before {
-    content: "LP PROTO";
+    content: "LP サンプル";
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     font-weight: 900;
@@ -649,8 +649,8 @@ body {
     }
 
     .project-image.tetris::before {
-        font-size: 1.4rem;
-        letter-spacing: 2px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -658,6 +658,11 @@ body {
     .btn {
         padding: 0.3rem 0.5rem;
         font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .project-image.tetris::before {
+        font-size: 1rem;
         letter-spacing: 0.5px;
     }
 }
