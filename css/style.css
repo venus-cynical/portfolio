@@ -296,7 +296,7 @@ body {
     overflow: hidden;
 }
 
-.project-image::before {
+.project-image.manga-quotes::before {
     content: "きさま！\A見ているなッ！";
     white-space: pre;
     color: var(--primary-color);
@@ -311,14 +311,38 @@ body {
         -3px 0 0 var(--secondary-color),
         0 3px 0 var(--secondary-color),
         0 -3px 0 var(--secondary-color);
-    transform: skew(-5deg) translateY(100%);
     letter-spacing: 2px;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-5deg);
+    opacity: 1;
 }
 
-.project-card:hover .project-image::before {
-    transform: skew(-5deg) translateY(0);
+.project-image.tetris::before {
+    content: "T E T R I S";
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    background: linear-gradient(
+        90deg,
+        #ff0000 0%,    /* T */
+        #00ff00 20%,   /* E */
+        #0000ff 40%,   /* T */
+        #ffff00 60%,   /* R */
+        #ff00ff 80%,   /* I */
+        #00ffff 100%   /* S */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 1;
 }
 
@@ -688,60 +712,4 @@ button:hover ~ .cursor {
 
 h1:hover, h2:hover, .logo:hover {
     animation: textGlitch 1s infinite;
-}
-
-.project-image.manga-quotes::before {
-    content: "きさま！\A見ているなッ！";
-    white-space: pre;
-    color: var(--primary-color);
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 
-        3px 3px 0 var(--secondary-color),
-        -3px -3px 0 var(--secondary-color),
-        3px -3px 0 var(--secondary-color),
-        -3px 3px 0 var(--secondary-color),
-        3px 0 0 var(--secondary-color),
-        -3px 0 0 var(--secondary-color),
-        0 3px 0 var(--secondary-color),
-        0 -3px 0 var(--secondary-color);
-    transform: skew(-5deg) translateY(100%);
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1);
-}
-
-.project-card:hover .project-image.manga-quotes::before {
-    transform: skew(-5deg) translateY(0);
-    opacity: 1;
-}
-
-.project-image.tetris::before {
-    content: "T E T R I S";
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: 5px;
-    background: linear-gradient(
-        90deg,
-        #ff0000 0%,    /* T */
-        #00ff00 20%,   /* E */
-        #0000ff 40%,   /* T */
-        #ffff00 60%,   /* R */
-        #ff00ff 80%,   /* I */
-        #00ffff 100%   /* S */
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.3);
-    transform: translateY(100%);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1);
-}
-
-.project-card:hover .project-image.tetris::before {
-    transform: translateY(0);
-    opacity: 1;
 } 
