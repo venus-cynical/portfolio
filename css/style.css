@@ -297,7 +297,8 @@ body {
 }
 
 .project-image::before {
-    content: "きさま！見ているなッ！";
+    content: "きさま！\A見ているなッ！";
+    white-space: pre;
     color: var(--primary-color);
     font-size: 2rem;
     font-weight: bold;
